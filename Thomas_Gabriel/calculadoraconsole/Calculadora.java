@@ -18,7 +18,7 @@ public class Calculadora {
 			throw new RuntimeException("Valor inválido!");
 		}
 
-		String texto = "Qual operação deseja realizar\n[1]Soma\n[2]Subtração\n[3]Multiplicação";
+		String texto = "Qual operação deseja realizar\n[1]Soma\n[2]Subtração\n[3]Multiplicação\n[4]divisao";
 		System.out.println(texto);
 
 		int escolha = input.nextInt();
