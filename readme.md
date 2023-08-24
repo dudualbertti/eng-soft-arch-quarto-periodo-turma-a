@@ -2,6 +2,8 @@
 
 ### Comandos do GIT
 
+IMPORTANTE ESTAR com o GITBASH NA PASTA DO REPO(eng-soft-poo-terceiro-periodo)
+
 Adicionar alterações
 > git add .
 
@@ -11,11 +13,31 @@ Adicionar comitar localmente arquivos alterados
 Enviar para upstream(repositório remoto)
 > git push
 
+🚧CASO USUÁRIO NÃO CONFIGURADO
+
 Configurar usuário global na máquina
 > git config --global user.name "nomeUSerGit"
 
 Configurar e-mail usuário global na máquina
 > git config --global user.email "email_git@hotmail.com"
+
+REMOVER USUÁRIO DO GIT DA MÁQUINA CASO NÃO ESTEJA NO SEU COMPUTADOR PESSOAL
+
+> git config --global --unset user.name
+
+> git config --global --unset user.email
+
+BUSCAR POR Gerenciador de Credenciais no windows e remover o acesso dado ao GIT
+
+---
+
+### Link do Notion🔥
+
+---
+
+[Notion](https://www.notion.so/Primeiro-Bimestre-013e0180341e4a73b3ba2d1768fca330)
+
+---
 
 ### Conteúdo programático
 
