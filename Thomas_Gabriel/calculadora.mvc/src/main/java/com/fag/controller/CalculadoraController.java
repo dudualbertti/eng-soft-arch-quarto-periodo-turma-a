@@ -1,4 +1,4 @@
-package com.fag;
+package com.fag.controller;
 import io.quarkus.qute.Template;
 import io.quarkus.qute.TemplateInstance;
 
@@ -11,11 +11,11 @@ import jakarta.ws.rs.core.MediaType;
 import static java.util.Objects.requireNonNull;
 
 @Path("/some-page")
-public class SomePage {
+public class CalculadoraController {
 
     private final Template page;
 
-    public SomePage(Template page) {
+    public CalculadoraController(Template page) {
         this.page = requireNonNull(page, "page is required");
     }
 
