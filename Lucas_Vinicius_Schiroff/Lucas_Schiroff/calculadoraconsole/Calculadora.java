@@ -8,7 +8,7 @@ public class Calculadora{
     
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+    
         String texto = ("Qual a operação que deseja realizar ? \n[1]Soma \n[2]Subtração \n[3]Multiplicação \n[4]Divisão \n[5]sair");
         System.out.println(texto);
         int escolha = input.nextInt();
@@ -47,5 +47,5 @@ public class Calculadora{
         System.out.println(val2);
         
     }
-
+ 
 }
