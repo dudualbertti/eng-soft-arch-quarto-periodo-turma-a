@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {name ?: "Qute"}</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        h1 {
+            color: #4695EB;
+            font-size: 6vw;
+        }
+
+        h1 b {
+            color: #be9100;
+        }
+
+        p {
+            font-size: 2vw;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello <b>{name ?: "Qute"}</b></h1>
+<form action="/some-page" method="post">
+<input type="text" name="valor1" >
+<input type="text" name="valor2" >
+<select name="selecao" >
+    <option value="+">Somar</option> 
+    <option value="-">Subtrair</option> 
+    <option value="x">Multiplicar</option> 
+    <option value="/">Dividir</option> 
+</select>
+<button>calcular</button>
+
+</form>
+<p>Create your web page using Quarkus RESTEasy & Qute</p>
+</body>
+</html>
