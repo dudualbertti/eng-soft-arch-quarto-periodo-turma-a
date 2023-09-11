@@ -1,41 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
     <style>
+        /* Estilize o formulário aqui */
         body {
-            background-color: #000;
+            font-family: Arial, sans-serif;
+            background-image:linear-gradient(to bottom left,#4646fd, #111010);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .formulario {
+            background-color: #cacaca;
+            border: 2px solid #e1e1e1;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        .formulario h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        .botao {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #79a2f6;
             color: #fff;
-        }
-        h1 {
-            color: #4695EB;
-            font-size: 6vw;
-        }
-
-        h1 b {
-            color: #be9100;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
         }
 
-        p {
-            font-size: 2vw;
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
-<form action="/some-page" method="post">
-<input type="text" name="valor1" >
-<input type="text" name="valor2" >
-<select name="selecao" >
-    <option value="+">Somar</option> 
-    <option value="-">Subtrair</option> 
-    <option value="x">Multiplicar</option> 
-    <option value="/">Dividir</option> 
-</select>
-<button>calcular</button>
-
+    <div class="formulario">
+        <h2> Calculadora</h2>
+        <form action="/some-page" method="post">
+        <div class="campo">
+            <label >Valor 1</label>
+            <input type="text"  name="valor1">
+        </div>
+        <div class="campo">
+            <label>valor 2</label>
+            <input type="text"  name="valor2">
+        </div>
+        <div class="campo">
+            <label>Escolha uma opção:</label>
+            <select id="operacao" name="operacao" >
+                <option value="somar">Somar</option>
+                <option value="diminuir">Subtrair</option>
+                <option value="vezes">Multiplicar</option>
+                <option value="dividi">Dividir</option>
+            </select>
+        </div>
+       <div class="botao">
+            <button>calcular</button>
+        </div>
+        <h2> Resultado:<b> {name ?: "Qute"}</b></h2>
+    </div>
 </form>
-<p>Create your web page using Quarkus RESTEasy & Qute</p>
 </body>
 </html>

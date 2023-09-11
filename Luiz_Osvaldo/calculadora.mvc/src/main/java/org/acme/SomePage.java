@@ -1,4 +1,5 @@
 package org.acme;
+
 import static java.util.Objects.*;
 
 import io.quarkus.qute.Template;
@@ -28,9 +29,24 @@ public class SomePage {
 
     @POST
     @Produces(MediaType.TEXT_HTML)
-    public TemplateInstance calcular(@FormParam("valor1") Double valor1,
-    @FormParam("valor2") Double valor2) {
-        return page.data("name", valor1+valor2);
+    public TemplateInstance calcular(
+            @FormParam("valor1") Double valor1,
+            @FormParam("valor2") Double valor2,
+            @FormParam("operacao") String operacao) {
+
+        double resultado = 0.0;
+
+        if ("somar".equals(operacao)) {
+            resultado = valor1 + valor2;
+        } else if ("diminuir".equals(operacao)) {
+            resultado = valor1 - valor2;
+        } else if ("vezes".equals(operacao)) {
+            resultado = valor1 * valor2;
+        } else if ("dividi".equals(operacao)) {
+            resultado = valor1 / valor2;
+        }
+        return page.data("name", resultado);
+
     }
 
 }
