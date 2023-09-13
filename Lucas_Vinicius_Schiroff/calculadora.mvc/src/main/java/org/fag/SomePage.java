@@ -25,15 +25,35 @@ public class SomePage {
     @GET
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance get(@QueryParam("name") String name) {
-        return page.data("name", "Lucas");
+        return page.data("name", "0");
     }
 
     @POST
     @Produces(MediaType.TEXT_HTML)
     public TemplateInstance calcular(@FormParam("valor1") Double valor1,
-    @FormParam("valor2") Double valor2) {
-        
-        return page.data("name", valor1+valor2);
+    @FormParam("valor2") Double valor2,
+    @FormParam("operacao")String operacao) {
+
+        double resultado = 0.0;
+
+        if(operacao != null){
+            switch (operacao) {
+                case "+":
+                    resultado = valor1 + valor2;
+                    break;
+                case "-":
+                    resultado = valor1 - valor2;
+                    break;
+                case "*":
+                    resultado = valor1 * valor2;
+                    break;
+                case "/":
+                    resultado = valor1 / valor2;
+                    break;
+            }
+        }
+
+        return page.data("name", resultado);
         
     }
     

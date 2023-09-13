@@ -1,46 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
+    <title>Calculadora</title>
+    
     <style>
         body {
             background-color: #000;
-            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
+
         h1 {
             color: #4695EB;
             font-size: 6vw;
+            margin-bottom: 20px;
         }
 
-        h1 b {
-            color: #be9100;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        p {
-            font-size: 2vw;
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4695EB;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 125px;
+            height: 30px;
+            font-size: 120%;
+            margin: 5px;
+        }
+
+        select[name="operacao"] {
+            width: 50%;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            text-align-last: center;
+            font-weight: bold;
+            font-size: 105%;
+
+        }
+
+        h1[name="resultado"] {
+            margin-top: 30px;
         }
     </style>
+
 </head>
+
 <body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
 
-<form action="/some-page" method="post">
+    <form action="/some-page" method="post">
 
-    <input type="number" name="valor1">
+        <input type="number" name="valor1" required placeholder="Valor 1">
+        <input type="number" name="valor2" required placeholder="Valor 2">
 
-    <input type="number" name="valor2">
+        <select name="operacao" id="operacao">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
 
-    <select name="select" id="" name="select">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">x</option>
-        <option value="/">/</option>
-    </select>
+        <button type="submit">Calcular</button>
+    </form>
 
-    <button>Calcular</button>
-</form>
+    <h1 name="resultado"><span>{name}</span></h1>
 
-<p>Create your web page using Quarkus RESTEasy & Qute</p>
 </body>
+
 </html>
