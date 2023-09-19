@@ -9,7 +9,6 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
-
 import static java.util.Objects.requireNonNull;
 
 @Path("/some-page")
@@ -17,13 +16,12 @@ import static java.util.Objects.requireNonNull;
 public class SomePage {
 
     private final Template page;
-     private final Template result;
+    private final Template result;
 
     public SomePage(Template page, Template result) {
         this.page = requireNonNull(page, "page is required");
         this.result = requireNonNull(result, "page is required");
     }
-    
 
     @GET
     @Produces(MediaType.TEXT_HTML)
@@ -53,7 +51,13 @@ public class SomePage {
                 result2 = val1 * val2;
                 break;
             case "divide":
-                result2 = val1 / val2;
+
+                if (val2 != 0) {
+                    result2 = val1 / val2;
+                } else {
+
+                    result2 = Double.NaN;
+                }
                 break;
             default:
                 break;
