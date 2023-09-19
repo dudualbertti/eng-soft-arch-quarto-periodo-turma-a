@@ -17,10 +17,15 @@
             font-family: Arial, sans-serif;
         }
 
-        h1 {
+        h1{
+            color: #fff;
+        }
+
+        h2 {
             color: #4695EB;
-            font-size: 6vw;
+            font-size: 5vw;
             margin-bottom: 20px;
+            margin-top: 10px;
         }
 
         form {
@@ -30,10 +35,11 @@
             background-color: #333;
             padding: 20px;
             border-radius: 10px;
+            width: 25%;
         }
 
         form input {
-            width: 100%;
+            width: 80%;
             padding: 10px;
             margin: 5px;
             border-radius: 5px;
@@ -63,9 +69,6 @@
 
         }
 
-        h1[name="resultado"] {
-            margin-top: 30px;
-        }
     </style>
 
 </head>
@@ -73,9 +76,10 @@
 <body>
 
     <form action="/some-page" method="post">
+        
 
-        <input type="number" name="valor1" required placeholder="Valor 1">
-        <input type="number" name="valor2" required placeholder="Valor 2">
+        <input type="number" name="valor1" required placeholder="Valor 1"><br>
+        <input type="number" name="valor2" required placeholder="Valor 2"><br>
 
         <select name="operacao" id="operacao">
             <option value="+">+</option>
@@ -83,11 +87,13 @@
             <option value="*">*</option>
             <option value="/">/</option>
         </select>
-
+        <br>
         <button type="submit">Calcular</button>
+
+        <h1>Resultado:</h1>
+        <h2 name="resultado"><span>{name}</span></h2>
     </form>
 
-    <h1 name="resultado"><span>{name}</span></h1>
 
 </body>
 
