@@ -2,41 +2,69 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
+    <title>CalculadoraController</title>
     <style>
+         
+    
         body {
-            background-color: #000;
-            color: #fff;
-        }
-        h1 {
-            color: #4695EB;
-            font-size: 6vw;
-        }
-
-        h1 b {
-            color: #be9100;
+            background-color: #e20909;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
-        p {
-            font-size: 2vw;
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
+        .panel{
+            padding: 15px;
+            border-radius: 15px;
+            background-color: aliceblue;
+        }
+        p #resultado{
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
     </style>
 </head>
 <body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
-    <form action="">
-        <label for="numero1">Numero 1</label>
-        <input type="number" id="numero1"> 
+    <div class="panel">
+        <form action="/some-page" method="post">
+            <label for="numero1">Numero 1</label>
+            <input type="number" name="numero1"> 
 
-        <br>
+            <br>
 
-        <label for="numero2">Numero 2</label>
-        <input type="number" id="numero2">
+            <label for="numero2">Numero 2</label>
+            <input type="number" name="numero2" name="numero2">
 
-        <br>
+            <br>
 
-        <button>Calcular</button>
-    </form>
-<p>Create your web page using Quarkus RESTEasy & Qute</p>
+            <input type="submit" value="calcular">
+
+            <br>
+
+            <select name="operation">
+                <option>Soma</option>
+                <option>Divisão</option>
+                <option>Multiplicação</option>
+                <option>Subtração</option>
+            </select>
+        </form>
+        <p id="result" name="result">{result}</p>
+    </div>
 </body>
 </html>
