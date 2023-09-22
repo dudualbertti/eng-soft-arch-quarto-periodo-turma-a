@@ -47,6 +47,6 @@ public class SomePage {
                 break;
         }
         return page.data("name", resultado);
-    }
+    }
 
 }
