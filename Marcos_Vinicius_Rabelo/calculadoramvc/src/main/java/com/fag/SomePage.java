@@ -46,11 +46,7 @@ public class SomePage {
             resultado = valor1 / valor2;
                 break;
         }
-<<<<<<< HEAD
         return page.data("name", resultado); 
-=======
-        return page.data("name", resultado);
->>>>>>> aa8b353a5f7de450e6be22883a3367650bf0962b
     }
 
 }
