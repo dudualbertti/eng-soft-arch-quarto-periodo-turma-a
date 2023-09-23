@@ -11,7 +11,7 @@ import jakarta.ws.rs.core.MediaType;
 
 import static java.util.Objects.requireNonNull;
 
-@Path("/some-page")
+@Path("operacoes")
 public class SomePage {
 
     private final Template page;
@@ -46,7 +46,7 @@ public class SomePage {
             resultado = valor1 / valor2;
                 break;
         }
-        return page.data("name", resultado);
+        return page.data("name", resultado); 
     }
 
 }
