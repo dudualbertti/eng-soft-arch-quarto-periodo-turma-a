@@ -11,7 +11,7 @@ public class Calculadora{
         String text = "Qual operação deseja realizar?:\n [1] Adição\n [2] Subtração\n [3] Multiplicação\n [4] Divisão\n [5] Sair";
         System.out.println(text);
         int escolha = scan.nextInt();
-        Double val1 = 0.0, val2 = 0.0;
+        Double val1 = 0.0, val2 = 0.0;+
 
         if(escolha == 5){
 
@@ -51,4 +51,4 @@ public class Calculadora{
         }
 
     }
-}
+}     
