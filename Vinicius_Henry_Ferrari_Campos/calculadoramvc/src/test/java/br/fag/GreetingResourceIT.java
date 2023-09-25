@@ -1,4 +1,4 @@
-package com.fag;
+package br.fag;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
