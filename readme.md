@@ -1,5 +1,32 @@
 ## 🏗Projeto de Arquitetura de Software
 
+### Destaques do Repo✨
+
+**Abaixo estão os 7 trabalhos de alunos que fizeram tanto um front quanto um back-end bala.**
+
+Eduardo Felipe Nascimento Batalini - Bela escolha de cores🎨
+![Eduardo_Felipe_Nascimento_Batalini](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-a/assets/61207420/87c2f4d9-a62a-4a7e-9122-e022fb9ae7ce)
+
+Lucas Nathan Oliveira De Moura - De simples só tem o nome🔥
+![LucasNathanMoura](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-a/assets/61207420/be784585-a61c-41fc-927b-3a761c1d2329)
+
+Lucas Vinícius Schiroff - Chamou no dark mode😎
+![Lucas_Vinicius_Schiroff](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-a/assets/61207420/982161ee-d1d1-4eb8-a2ea-7e307656054d)
+
+Maria Eduarda Bergamin Jorge - Implementação completa do MVC, com service e tudo✨
+![Maria](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-a/assets/61207420/2e2d0dcb-9493-4f53-ab14-dbac742fdcf4)
+
+Rafael Stainhaus De Souza - Chique🥶
+![RefaelStainhaus](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-a/assets/61207420/518a7216-5316-4805-a741-9a2e7e35c126)
+
+Samuel Santos Marques - ⚡
+![SamuelSantos](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-a/assets/61207420/afa9ed1b-559d-41bb-b1a1-8cc01aa940e2)
+
+Thomas Gabriel Martins Sales - ⚡
+![Thomas](https://github.com/Sandrolaxx/eng-soft-arch-quarto-periodo-turma-a/assets/61207420/d9458dd9-7358-4889-aa8e-627bbc79b14a)
+
+---
+
 ### Comandos do GIT
 
 IMPORTANTE ESTAR com o GITBASH NA PASTA DO REPO(eng-soft-poo-terceiro-periodo)
