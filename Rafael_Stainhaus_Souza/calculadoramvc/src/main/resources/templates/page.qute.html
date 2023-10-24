@@ -2,29 +2,27 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello {name ?: "Qute"}</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-        }
-        h1 {
-            color: #4695EB;
-            font-size: 6vw;
-        }
-
-        h1 b {
-            color: #be9100;
-        }
-
-        p {
-            font-size: 2vw;
-        }
-    </style>
+    <title>Calculadora do Rafinha</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 <body>
-<h1>Hello <b>{name ?: "Qute"}</b></h1>
-
-<p>Create your web page using Quarkus RESTEasy & Qute</p>
+<h1>CALCULADORA DO RAFINHA</h1>
+<div class="container">
+    <form action="/calculo/calcular" method="POST">
+        <label>valor 1</label>
+        <input type="number" name="valor1" />
+        <label>valor 2</label>
+        <input type="number" name="valor2"/>
+        <select name="op">
+            <option value="Soma">adição</option>
+            <option value="Sub">Subtração</option>
+            <option value="Mult">Multipicação</option>
+            <option value="Div">Divisão</option>
+        </select>
+        <br/>
+        <br/>
+        <button type="submit">Calcular</button>
+    </form>
+</div>
 </body>
 </html>
