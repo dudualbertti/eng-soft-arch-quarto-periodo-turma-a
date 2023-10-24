@@ -8,44 +8,29 @@ public class RechargeBO {
 
     private Integer providerId;
 
-    private PhoneBO phoneBO;
+    private PhoneBO phone;
 
-    public RechargeBO(Double value, String document, Integer providerId, PhoneBO phoneBO) {
+    public RechargeBO(Double value, String document, Integer providerId, PhoneBO phone) {
         this.value = value;
         this.document = document;
         this.providerId = providerId;
-        this.phoneBO = phoneBO;
+        this.phone = phone;
     }
 
     public Double getValue() {
         return value;
     }
 
-    public void setValue(Double value) {
-        this.value = value;
-    }
-
     public String getDocument() {
         return document;
-    }
-
-    public void setDocument(String document) {
-        this.document = document;
     }
 
     public Integer getProviderId() {
         return providerId;
     }
 
-    public void setProviderId(Integer providerId) {
-        this.providerId = providerId;
+    public PhoneBO getPhone() {
+        return phone;
     }
 
-    public PhoneBO getPhoneBO() {
-        return phoneBO;
-    }
-
-    public void setPhoneBO(PhoneBO phoneBO) {
-        this.phoneBO = phoneBO;
-    }
 }
