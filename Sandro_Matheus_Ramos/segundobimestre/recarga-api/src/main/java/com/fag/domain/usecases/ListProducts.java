@@ -9,7 +9,7 @@ public class ListProducts {
 
     private IVendorRepository repo;
 
-    ListProducts(IVendorRepository repo) {
+    public ListProducts(IVendorRepository repo) {
         this.repo = repo;
     }
 

@@ -7,7 +7,7 @@ public class CreateRecharge {
 
     private IVendorRepository repo;
 
-    CreateRecharge(IVendorRepository repo) {
+    public CreateRecharge(IVendorRepository repo) {
         this.repo = repo;
     }
 
