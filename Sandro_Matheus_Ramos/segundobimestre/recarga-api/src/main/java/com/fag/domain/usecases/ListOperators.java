@@ -9,7 +9,7 @@ public class ListOperators {
     
     private IVendorRepository repo;
 
-    ListOperators(IVendorRepository repo) {
+    public ListOperators(IVendorRepository repo) {
         this.repo = repo;
     }
 
