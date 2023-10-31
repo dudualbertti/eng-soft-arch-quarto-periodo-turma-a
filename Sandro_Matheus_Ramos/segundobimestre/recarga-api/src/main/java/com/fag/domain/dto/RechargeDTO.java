@@ -2,13 +2,21 @@ package com.fag.domain.dto;
 
 public class RechargeDTO {
 
+    private String id;
+
     private Double value;
 
     private String document;
 
-    private Integer providerId;
+    private Integer operatorId;
 
     private PhoneDTO phone;
+
+    private String receipt;
+
+    private Long transactionId;
+
+    private boolean success;
 
     public Double getValue() {
         return value;
@@ -26,12 +34,12 @@ public class RechargeDTO {
         this.document = document;
     }
 
-    public Integer getProviderId() {
-        return providerId;
+    public Integer getOperatorId() {
+        return operatorId;
     }
 
-    public void setProviderId(Integer providerId) {
-        this.providerId = providerId;
+    public void setOperatorId(Integer providerId) {
+        this.operatorId = providerId;
     }
 
     public PhoneDTO getPhone() {
@@ -40,6 +48,38 @@ public class RechargeDTO {
 
     public void setPhone(PhoneDTO phone) {
         this.phone = phone;
+    }
+
+    public String getReceipt() {
+        return receipt;
+    }
+
+    public void setReceipt(String receipt) {
+        this.receipt = receipt;
+    }
+
+    public Long getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(Long transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 }
