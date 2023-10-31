@@ -1,20 +1,19 @@
 package com.fag.domain.usecases;
 
-import java.util.List;
-
 import com.fag.domain.dto.ProductDTO;
-import com.fag.domain.repositories.IVendorRepository;
+import com.fag.domain.repositories.IRechargeVendor;
+import java.util.List;
 
 public class ListProducts {
 
-    private IVendorRepository repo;
+    private IRechargeVendor repo;
 
-    ListProducts(IVendorRepository repo) {
+    ListProducts(IRechargeVendor repo) {
         this.repo = repo;
     }
 
-    public List<ProductDTO> execute(Integer providerId) {
-        return repo.listProducts(providerId);
-    }
+    public List<ProductDTO> execute(Integer providerID) {
 
+        return repo.Listproduct(providerID);
+    }
 }

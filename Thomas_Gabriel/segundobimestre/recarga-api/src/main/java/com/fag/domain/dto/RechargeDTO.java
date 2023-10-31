@@ -2,7 +2,7 @@ package com.fag.domain.dto;
 
 public class RechargeDTO {
 
-    private Double value;
+    private double value;
 
     private String document;
 
@@ -10,36 +10,45 @@ public class RechargeDTO {
 
     private PhoneDTO phone;
 
-    public Double getValue() {
-        return value;
-    }
-
-    public void setValue(Double value) {
+    public void setValue(double value) {
         this.value = value;
-    }
-
-    public String getDocument() {
-        return document;
     }
 
     public void setDocument(String document) {
         this.document = document;
     }
 
-    public Integer getProviderId() {
-        return providerId;
-    }
-
     public void setProviderId(Integer providerId) {
         this.providerId = providerId;
+    }
+
+    public void setPhone(PhoneDTO phone) {
+        this.phone = phone;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public String getDocument() {
+        return document;
+    }
+
+    public Integer getProviderId() {
+        return providerId;
     }
 
     public PhoneDTO getPhone() {
         return phone;
     }
 
-    public void setPhone(PhoneDTO phone) {
-        this.phone = phone;
+    public void setReceipt(String receiptData) {
+    }
+
+    public void setTransactionId(long transactionId) {
+    }
+
+    public void setSuccess(boolean equals) {
     }
 
 }

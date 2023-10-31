@@ -1,20 +1,15 @@
 package com.fag.domain.usecases;
 
-import java.util.List;
-
 import com.fag.domain.dto.OperatorDTO;
-import com.fag.domain.repositories.IVendorRepository;
-
+import com.fag.domain.repositories.IRechargeVendor;
+import java.util.List;
 public class ListOperators {
+    private IRechargeVendor repo;
     
-    private IVendorRepository repo;
-
-    ListOperators(IVendorRepository repo) {
+    ListOperators(IRechargeVendor repo){
         this.repo = repo;
     }
-
     public List<OperatorDTO> execute() {
-        return repo.listOperators();
+        return repo.listOperator();
     }
-
 }

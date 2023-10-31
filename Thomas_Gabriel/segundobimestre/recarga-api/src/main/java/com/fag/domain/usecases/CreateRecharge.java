@@ -1,18 +1,17 @@
 package com.fag.domain.usecases;
 
 import com.fag.domain.dto.RechargeDTO;
-import com.fag.domain.repositories.IVendorRepository;
+import com.fag.domain.repositories.IRechargeVendor;
 
 public class CreateRecharge {
+    private IRechargeVendor repo;
 
-    private IVendorRepository repo;
-
-    CreateRecharge(IVendorRepository repo) {
+    CreateRecharge(IRechargeVendor repo) {
         this.repo = repo;
-    }
+    
 
-    public RechargeDTO execute(RechargeDTO dto) {
+    }
+    public RechargeDTO execute(RechargeDTO dto){
         return repo.createRecharge(dto);
     }
-
 }

@@ -1,8 +1,8 @@
 package com.fag.domain.entities;
 
 public class RechargeBO {
-    
-    private Double value;
+
+    private double value;
 
     private String document;
 
@@ -10,14 +10,14 @@ public class RechargeBO {
 
     private PhoneBO phone;
 
-    public RechargeBO(Double value, String document, Integer providerId, PhoneBO phone) {
+    public RechargeBO(double value, String document, Integer providerId, PhoneBO phone) {
         this.value = value;
         this.document = document;
         this.providerId = providerId;
         this.phone = phone;
     }
 
-    public Double getValue() {
+    public double getValue() {
         return value;
     }
 
@@ -33,4 +33,5 @@ public class RechargeBO {
         return phone;
     }
 
+    
 }
