@@ -11,7 +11,7 @@ public class OperatorDTO {
         this.category = category;
     }
 
-    public void setname(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 

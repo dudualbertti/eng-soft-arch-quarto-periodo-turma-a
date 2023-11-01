@@ -25,24 +25,21 @@ public interface RestClientCelcoin {
     @POST
     @Path("/v5/token")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    CelcoinTokenDTO generaToken(Form form);
+    CelcoinTokenDTO generateToken(Form form);
 
-@GET
-@Path("/v5/transactons/topups/providers")
+    @GET
+    @Path("/v5/transactons/topups/providers")
+    CelcoinOperatorsDTO listOperators(@HeaderParam("Authorization") String token,
+            @QueryParam("stateCode") Integer stateCode, @QueryParam("category") Integer category);
 
-CelcoinOperatorsDTO listOperators(@HeaderParam("Authorization") String token,
-@QueryParam("stateCode") Integer stateCode, @QueryParam("category") Integer category);
+    @GET
+    @Path("/v5/transactons/topups/provider-values")
+    CelcoinProductsDTO listProducts(@HeaderParam("Authorization") String token,
+            @QueryParam("stateCode") Integer stateCode, @QueryParam("providerId") Integer operatorId);
 
-@GET
-@Path("/v5/transactons/topups/provider-values")
-
-CelcoinProductsDTO listProducts(@HeaderParam ("Authorization") String token,
-@QueryParam("stateCode") Integer stateCode, @QueryParam("providerId") Integer operatorId);
-
-@POST
-@Path("/v5/transactons/topups")
-@Consumes(MediaType.APPLICATION_JSON)
-CelcoinRechargeResponseDTO handleRecharge(@HeaderParam("Authorization") String token, CelcoinRechargeDTO payload);
-
+    @POST
+    @Path("/v5/transactons/topups")
+    @Consumes(MediaType.APPLICATION_JSON)
+    CelcoinRechargeResponseDTO handleRecharge(@HeaderParam("Authorization") String token, CelcoinRechargeDTO payload);
 
 }

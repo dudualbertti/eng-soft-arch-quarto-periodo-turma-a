@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKT_RECHARGE")
 
-public class PanacheRecharge  extends PanacheEntityBase{
+public class PanacheRecharge extends PanacheEntityBase {
     @Id
     private UUID id;
 
@@ -99,12 +99,4 @@ public class PanacheRecharge  extends PanacheEntityBase{
     public void setSuccess(boolean success) {
         this.success = success;
     }
-
-    
-
-
-    }
-
-
-    
-
+}

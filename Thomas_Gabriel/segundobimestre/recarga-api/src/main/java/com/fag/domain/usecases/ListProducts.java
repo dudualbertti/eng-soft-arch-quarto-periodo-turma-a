@@ -8,12 +8,11 @@ public class ListProducts {
 
     private IRechargeVendor repo;
 
-    ListProducts(IRechargeVendor repo) {
+    public ListProducts(IRechargeVendor repo) {
         this.repo = repo;
     }
 
-    public List<ProductDTO> execute(Integer providerID) {
-
-        return repo.Listproduct(providerID);
+    public List<ProductDTO> execute(Integer stateCode, Integer providerID) {
+        return repo.listProducts(providerID, providerID);
     }
 }

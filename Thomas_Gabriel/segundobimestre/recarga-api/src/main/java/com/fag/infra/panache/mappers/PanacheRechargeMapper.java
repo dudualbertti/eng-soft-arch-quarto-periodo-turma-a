@@ -10,18 +10,18 @@ public class PanacheRechargeMapper {
 
         Integer countryCode = Integer.valueOf(entity.getPhoneNumber().substring(0, 2));
 
-        Integer stateCode = Integer.valuef(entity.getPhoneNumber.substring(2, 4));
+        Integer stateCode = Integer.valueOf(entity.getPhoneNumber().substring(2, 4));
 
         String number = entity.getPhoneNumber().substring(4, entity.getPhoneNumber().length());
 
-        return new RechargeBo(
+        return new RechargeBO(
                 entity.getId(),
                 entity.getValue(),
                 entity.getDocument(),
-                entity - getOperatorId(),
-                new PhoneBO(countryCode, stateCode, number),
+                entity.getOperatoId(),
+                new PhoneBO(countryCode.toString(), stateCode.toString(), number.toString()),
                 entity.getReceipt(),
-                entity - getTransactionId(),
+                entity.getTransactionId(),
                 entity.isSuccess());
     }
 
@@ -30,10 +30,10 @@ public class PanacheRechargeMapper {
         String phone = bo.getPhone().getCountryCode().toString().concat(bo.getPhone().getStateCode().toString()
                 .concat(bo.getPhone().getNumber()));
 
-        entity.setId(bo, getId());
+        entity.setId(bo.getId());
         entity.setValue(bo.getValue());
         entity.setDocument(bo.getDocument());
-        entity.setOperatorId(bo.getProviderId());
+        entity.setOperatoId(bo.getProviderId());
         entity.setPhoneNumber(phone);
         entity.setTransactionId(bo.getTransactionId());
         entity.setReceipt(bo.getReceipt());

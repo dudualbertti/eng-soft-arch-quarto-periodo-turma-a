@@ -1,14 +1,15 @@
 package com.fag.infra.celcoin.dto;
+
 import java.util.List;
 
 public class CelcoinOperatorsDTO {
-    private List<CelcoinOperatorsDTO> providers;
+    private List<CelcoinOperatorDTO> providers;
 
-    public List<CelcoinOperatorsDTO> getProviders() {
+    public List<CelcoinOperatorDTO> getProviders() {
         return providers;
     }
 
-    public void setProviders(List<CelcoinOperatorsDTO> providers) {
+    public void setProviders(List<CelcoinOperatorDTO> providers) {
         this.providers = providers;
     }
 
