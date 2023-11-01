@@ -10,8 +10,8 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "AKT_RECHARGE")
-
 public class PanacheRecharge extends PanacheEntityBase {
+    
     @Id
     private UUID id;
 
