@@ -4,11 +4,9 @@ public class OperatorDTO {
 
     private Integer category;
 
-    private Integer rechargeType;
-
     private String name;
 
-    private Integer providerId;
+    private Integer operatorId;
 
     private Double maxValue;
 
@@ -22,14 +20,6 @@ public class OperatorDTO {
         this.category = category;
     }
 
-    public Integer getRechargeType() {
-        return rechargeType;
-    }
-
-    public void setRechargeType(Integer rechargeType) {
-        this.rechargeType = rechargeType;
-    }
-
     public String getName() {
         return name;
     }
@@ -38,12 +28,12 @@ public class OperatorDTO {
         this.name = name;
     }
 
-    public Integer getProviderId() {
-        return providerId;
+    public Integer getOperatorId() {
+        return operatorId;
     }
 
-    public void setProviderId(Integer providerId) {
-        this.providerId = providerId;
+    public void setOperatorId(Integer providerId) {
+        this.operatorId = providerId;
     }
 
     public Double getMaxValue() {
