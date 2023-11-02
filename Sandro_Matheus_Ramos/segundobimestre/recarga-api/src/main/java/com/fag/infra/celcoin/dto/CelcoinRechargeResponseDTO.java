@@ -1,14 +1,25 @@
 package com.fag.infra.celcoin.dto;
+
 public class CelcoinRechargeResponseDTO {
+
     private Integer nsuNameProvider;
+
     private Integer authentication;
+
     private CelcoinRechargeReceiptDTO receipt;
+
     private String settleDate;
+
     private String createDate;
-    private long transactionId;
+
+    private Long transactionId;
+
     private String urlreceipt;
+
     private String errorCode;
+
     private String message;
+
     private Integer status;
 
     public Integer getNsuNameProvider() {
@@ -51,11 +62,11 @@ public class CelcoinRechargeResponseDTO {
         this.createDate = createDate;
     }
 
-    public long getTransactionId() {
+    public Long getTransactionId() {
         return transactionId;
     }
 
-    public void setTransactionId(long transactionId) {
+    public void setTransactionId(Long transactionId) {
         this.transactionId = transactionId;
     }
 

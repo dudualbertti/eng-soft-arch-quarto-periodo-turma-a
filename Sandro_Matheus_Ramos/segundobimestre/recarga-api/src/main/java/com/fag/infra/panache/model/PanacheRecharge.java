@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "AKT_RECHARGE")
 public class PanacheRecharge extends PanacheEntityBase {
-    
+
     @Id
     private UUID id;
 
@@ -22,7 +22,7 @@ public class PanacheRecharge extends PanacheEntityBase {
     private String document;
 
     @Column(name = "OPERATOR_ID")
-    private Integer operatoId;
+    private Integer operatorId;
 
     @Column(name = "PHONE_NUMBER")
     private String phoneNumber;
@@ -60,12 +60,12 @@ public class PanacheRecharge extends PanacheEntityBase {
         this.document = document;
     }
 
-    public Integer getOperatoId() {
-        return operatoId;
+    public Integer getOperatorId() {
+        return operatorId;
     }
 
-    public void setOperatoId(Integer operatoId) {
-        this.operatoId = operatoId;
+    public void setOperatorId(Integer operatorId) {
+        this.operatorId = operatorId;
     }
 
     public String getPhoneNumber() {
@@ -99,4 +99,5 @@ public class PanacheRecharge extends PanacheEntityBase {
     public void setSuccess(boolean success) {
         this.success = success;
     }
+
 }
