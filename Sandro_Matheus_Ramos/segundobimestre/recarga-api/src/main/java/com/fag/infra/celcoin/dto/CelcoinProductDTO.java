@@ -1,9 +1,15 @@
 package com.fag.infra.celcoin.dto;
+
 public class CelcoinProductDTO {
+
     private Integer code;
+
     private Integer cost;
+
     private Integer dueProduct;
+
     private String productName;
+
     private Double minValue;
 
     public Integer getCode() {
@@ -22,14 +28,6 @@ public class CelcoinProductDTO {
         this.cost = cost;
     }
 
-    public Integer getDueProduct() {
-        return dueProduct;
-    }
-
-    public void setDueProduct(Integer dueProduct) {
-        this.dueProduct = dueProduct;
-    }
-
     public String getProductName() {
         return productName;
     }
@@ -42,8 +40,16 @@ public class CelcoinProductDTO {
         return minValue;
     }
 
-    public void setMinValue(Double minValue) {
-        this.minValue = minValue;
+    public void setMinValue(Double value) {
+        this.minValue = value;
+    }
+
+    public Integer getDueProduct() {
+        return dueProduct;
+    }
+
+    public void setDueProduct(Integer dueProduct) {
+        this.dueProduct = dueProduct;
     }
 
 }

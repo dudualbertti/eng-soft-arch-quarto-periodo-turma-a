@@ -1,7 +1,11 @@
 package com.fag.infra.celcoin.dto;
+
 public class CelcoinPhoneDTO {
+
     private Integer stateCode;
+
     private Integer countryCode;
+
     private String number;
 
     public Integer getStateCode() {
