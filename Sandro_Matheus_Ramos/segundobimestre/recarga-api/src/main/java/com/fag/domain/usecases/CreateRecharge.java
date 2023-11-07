@@ -20,7 +20,7 @@ public class CreateRecharge {
     public RechargeDTO execute(RechargeDTO dto) {
         RechargeBO bo = RechargeMapper.toBO(dto);
 
-        RechargeDTO rechargeResponse = vendor.createRecharge(dto);
+        RechargeDTO rechargeResponse = vendor.create(dto);
 
         if (rechargeResponse.isSuccess()) {
             bo.handleSuccess(rechargeResponse.getReceipt(), rechargeResponse.getTransactionId());

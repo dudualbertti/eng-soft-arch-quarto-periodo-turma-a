@@ -18,4 +18,5 @@ public class PanacheDataBaseRepository implements IRechargeDataBaseRepository {
 
         return PanacheRechargeMapper.toDomain(entity);
     }
+
 }

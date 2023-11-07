@@ -1,10 +1,20 @@
 package com.fag.infra.celcoin.dto;
+
+import jakarta.json.bind.annotation.JsonbProperty;
+
 public class CelcoinOperatorDTO {
+
     private Integer category;
+
+    @JsonbProperty("TipoRecarganameProvider")
     private Integer rechargeType;
+
     private String name;
+
     private Integer providerId;
+
     private Double maxValue;
+
     private Double minValue;
 
     public Integer getCategory() {
@@ -20,7 +30,7 @@ public class CelcoinOperatorDTO {
     }
 
     public void setRechargeType(Integer rechargeType) {
-        this.rechargeType = rechargeType;
+        this.rechargeType= rechargeType;
     }
 
     public String getName() {
@@ -39,20 +49,20 @@ public class CelcoinOperatorDTO {
         this.providerId = providerId;
     }
 
-    public Double getMaxValue() {
-        return maxValue;
-    }
-
-    public void setMaxValue(Double maxValue) {
-        this.maxValue = maxValue;
-    }
-
     public Double getMinValue() {
         return minValue;
     }
 
     public void setMinValue(Double minValue) {
         this.minValue = minValue;
+    }
+
+    public Double getMaxValue() {
+        return maxValue;
+    }
+
+    public void setMaxValue(Double maxValue) {
+        this.maxValue = maxValue;
     }
 
 }

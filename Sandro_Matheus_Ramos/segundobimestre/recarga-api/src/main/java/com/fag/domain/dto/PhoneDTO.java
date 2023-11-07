@@ -2,30 +2,30 @@ package com.fag.domain.dto;
 
 public class PhoneDTO {
 
-    private String countryCode;
+    private Integer stateCode;
 
-    private String stateCode;
+    private Integer countryCode;
 
     private String number;
 
-    public String getCountryCode() {
+    public Integer getStateCode() {
+        return stateCode;
+    }
+
+    public void setStateCode(Integer stateCode) {
+        this.stateCode = stateCode;
+    }
+
+    public Integer getCountryCode() {
         return countryCode;
     }
 
-    public String getStateCode() {
-        return stateCode;
+    public void setCountryCode(Integer countryCode) {
+        this.countryCode = countryCode;
     }
 
     public String getNumber() {
         return number;
-    }
-
-    public void setCountryCode(String countryCode) {
-        this.countryCode = countryCode;
-    }
-
-    public void setStateCode(String stateCode) {
-        this.stateCode = stateCode;
     }
 
     public void setNumber(String number) {
