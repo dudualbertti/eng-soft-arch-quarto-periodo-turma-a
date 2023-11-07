@@ -1,6 +1,9 @@
 package com.fag.infra.celcoin.dto;
+
 public class CelcoinRechargeReceiptDTO {
+
     private String receiptData;
+
     private String receiptformatted;
 
     public String getReceiptData() {
@@ -18,5 +21,5 @@ public class CelcoinRechargeReceiptDTO {
     public void setReceiptformatted(String receiptformatted) {
         this.receiptformatted = receiptformatted;
     }
-
+    
 }

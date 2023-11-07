@@ -1,15 +1,20 @@
 package com.fag.infra.celcoin.dto;
+
 import java.util.List;
 
-public class CelcoinProductsDTO {
-    private List<CelcoinProductDTO> products;
+import jakarta.json.bind.annotation.JsonbProperty;
 
-    public List<CelcoinProductDTO> getProducts() {
-        return products;
+public class CelcoinProductsDTO {
+
+    @JsonbProperty("value")
+    private List<CelcoinProductDTO> procucts;
+
+    public List<CelcoinProductDTO> getProcucts() {
+        return procucts;
     }
 
-    public void setProducts(List<CelcoinProductDTO> products) {
-        this.products = products;
+    public void setProcucts(List<CelcoinProductDTO> procucts) {
+        this.procucts = procucts;
     }
 
 }
