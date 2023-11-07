@@ -1,20 +1,63 @@
 package com.fag.domain.entities;
 
+import java.util.UUID;
+
 public class RechargeBO {
-    
+
+    private UUID id;
+
     private Double value;
 
     private String document;
 
-    private int providerId;
+    private Integer providerId;
 
-    private PhoneBO PhoneBO;
+    private PhoneBO phone;
 
-    public RechargeBO(Double value, String document, int providerId, com.fag.domain.entities.PhoneBO phoneBO) {
+    private String receipt;
+
+    private Long transactionId;
+
+    private boolean success;
+
+    public RechargeBO(UUID id, Double value, String document, Integer providerId, PhoneBO phone,
+            String receipt, Long transactionId, boolean success) {
+        this.id = id != null ? id : UUID.randomUUID();
         this.value = value;
         this.document = document;
         this.providerId = providerId;
-        PhoneBO = phoneBO;
+        this.phone = phone;
+        this.receipt = receipt;
+        this.transactionId = transactionId;
+        this.success = success;
+
+        validate();
+    }
+
+    public void handleSuccess(String receipt, Long transactionId) {
+        this.receipt = receipt;
+        this.transactionId = transactionId;
+        this.success = true;
+    }
+
+    public void handleError() {
+        this.success = false;
+    }
+
+    private void validate() {
+
+        if (this.value == null) {
+            throw new RuntimeException("Campo obrigatório - Value");
+        }
+
+        if (this.document == null || this.document.isEmpty()) {
+            throw new RuntimeException("Campo obrigatório - Document");
+        }
+
+        if (this.phone == null) {
+            throw new RuntimeException("Campo obrigatório - Phone");
+        }
+
     }
 
     public Double getValue() {
@@ -25,14 +68,28 @@ public class RechargeBO {
         return document;
     }
 
-    public int getProviderId() {
+    public Integer getProviderId() {
         return providerId;
     }
 
-    public PhoneBO getPhoneBO() {
-        return PhoneBO;
+    public PhoneBO getPhone() {
+        return phone;
     }
 
+    public UUID getId() {
+        return id;
+    }
 
+    public String getReceipt() {
+        return receipt;
+    }
+
+    public Long getTransactionId() {
+        return transactionId;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
 
 }

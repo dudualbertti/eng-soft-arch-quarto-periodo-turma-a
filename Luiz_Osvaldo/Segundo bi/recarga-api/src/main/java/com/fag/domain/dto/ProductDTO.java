@@ -1,10 +1,10 @@
 package com.fag.domain.dto;
 
 public class ProductDTO {
-    
-    private String name;
 
     private Integer due;
+
+    private String name;
 
     private Double value;
 
@@ -12,16 +12,8 @@ public class ProductDTO {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getDue() {
-        return due;
-    }
-
-    public void setDue(Integer due) {
-        this.due = due;
+    public void setName(String productName) {
+        this.name = productName;
     }
 
     public Double getValue() {
@@ -31,4 +23,13 @@ public class ProductDTO {
     public void setValue(Double value) {
         this.value = value;
     }
+
+    public Integer getDue() {
+        return due;
+    }
+
+    public void setDue(Integer dueProduct) {
+        this.due = dueProduct;
+    }
+
 }

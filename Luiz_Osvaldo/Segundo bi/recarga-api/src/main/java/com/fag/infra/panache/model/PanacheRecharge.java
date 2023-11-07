@@ -1,22 +1,48 @@
-package com.fag.domain.dto;
+package com.fag.infra.panache.model;
 
-public class RechargeDTO {
+import java.util.UUID;
 
-    private String id;
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "AKT_RECHARGE")
+public class PanacheRecharge extends PanacheEntityBase {
+
+    @Id
+    private UUID id;
+
+    @Column(name = "AMOUNT")
     private Double value;
 
+    @Column(name = "DOCUMENT")
     private String document;
 
+    @Column(name = "OPERATOR_ID")
     private Integer operatorId;
 
-    private PhoneDTO phone;
+    @Column(name = "PHONE_NUMBER")
+    private String phoneNumber;
 
+    @Column(name = "RECEIPT", length = 4000)
     private String receipt;
 
+    @Column(name = "TRANSACTIONID")
     private Long transactionId;
 
+    @Column(name = "SUCCESS")
     private boolean success;
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public Double getValue() {
         return value;
@@ -38,16 +64,16 @@ public class RechargeDTO {
         return operatorId;
     }
 
-    public void setOperatorId(Integer providerId) {
-        this.operatorId = providerId;
+    public void setOperatorId(Integer operatorId) {
+        this.operatorId = operatorId;
     }
 
-    public PhoneDTO getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone(PhoneDTO phone) {
-        this.phone = phone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getReceipt() {
@@ -72,14 +98,6 @@ public class RechargeDTO {
 
     public void setSuccess(boolean success) {
         this.success = success;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
 }
