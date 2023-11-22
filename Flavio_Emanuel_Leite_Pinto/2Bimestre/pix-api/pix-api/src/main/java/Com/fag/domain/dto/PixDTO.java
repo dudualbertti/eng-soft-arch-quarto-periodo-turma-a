@@ -1,4 +1,5 @@
 package Com.fag.domain.dto;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -17,6 +18,8 @@ public class PixDTO {
     private String base64;
 
     private LocalDateTime expiration;
+    
+    private PixMerchantDTO merchant;
 
     public String getId() {
         return id;
@@ -72,6 +75,14 @@ public class PixDTO {
 
     public void setExpiration(LocalDateTime expiration) {
         this.expiration = expiration;
+    }
+
+    public PixMerchantDTO getMerchant() {
+        return merchant;
+    }
+
+    public void setMerchant(PixMerchantDTO merchant) {
+        this.merchant = merchant;
     }
 
 }

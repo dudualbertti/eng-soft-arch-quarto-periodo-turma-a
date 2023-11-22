@@ -1,4 +1,4 @@
-package Com.fag.infra.CelCoin.repository;
+package Com.fag.infra.Celcoin.repository;
 
 import java.util.UUID;
 
@@ -7,12 +7,11 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import Com.fag.domain.dto.PixDTO;
 import Com.fag.domain.repositories.IPixRepository;
-import Com.fag.infra.CelCoin.dto.CCPixDTO;
-import Com.fag.infra.CelCoin.dto.CCPixPayerDTO;
-import Com.fag.infra.CelCoin.dto.CCPixResponse;
-
+import Com.fag.infra.Celcoin.dto.CelCoinPixDTO;
+import Com.fag.infra.Celcoin.dto.CelCoinTokenDTO;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.core.Form;
 
 @ApplicationScoped
 public class CCPixRepository implements IPixRepository {
@@ -21,32 +20,38 @@ public class CCPixRepository implements IPixRepository {
     @RestClient
     RestClientCC restClient;
 
-    @ConfigProperty(name = "CC.token")
-    String CCToken;
-
-    private final String CC_PAYMENT_ID = "pix";
 
     @Override
     public PixDTO create(PixDTO dto) {
+
+        String token = getToken();
         
-        String token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiI0MWI0NGFiOWE1NjQ0MC50ZXN0ZS5jZWxjb2luYXBpLnY1IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InRlc3RlIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy91c2VyZGF0YSI6ImY2MWU4YTdlYjEyMzRlMGQ4MDViIiwiZXhwIjoxNjIzNzY0MTg2LCJpc3MiOiJDZWxjb2luQVBJIiwiYXVkIjoiQ2VsY29pbkFQSSJ9.CeIFVYPko6ItDdvw2GMc_WEbac-Hr_7dHjT4HsjKfmk";
-        String idempotencyKey = UUID.randomUUID().toString();
 
-        CCPixPayerDTO payerDTO = new CCPixPayerDTO();
-        CCPixDTO pixDTO = new CCPixDTO();
-        payerDTO.setEmail(dto.getEmail());
+        CelCoinPixDTO celcoinDTO = new CelCoinPixDTO();
 
-        pixDTO.setAmount(dto.getAmount());
-        pixDTO.setDescription(dto.getDescription());
-        pixDTO.setPaymentMethodId(CC_PAYMENT_ID);
-        pixDTO.setPayer(payerDTO);
+        celcoinDTO.setAmount(dto.getAmount());
+        celcoinDTO.setMerchant(dto.getMerchant());
+        celcoinDTO.setKey("testepix@celcoin.com.br");
 
-        CCPixResponse response = restClient.createPix(token, idempotencyKey, pixDTO);
+        System.out.println(celcoinDTO.toString());
+        
+       CelCoinPixDTO response = restClient.createPix(token, celcoinDTO);
 
-        dto.setEmv(response.getPoi().getTrxData().getEmv());
-        dto.setBase64(response.getPoi().getTrxData().getBase64());
+        dto.setEmv(response.getEmvqrcps());
 
         return dto;
     }
 
+    private String getToken() {
+        Form form = new Form();
+
+        form.param("client_id", "41b44ab9a56440.teste.celcoinapi.v5");
+        form.param("grant_type", "client_credentials");
+        form.param("client_secret", "e9d15cde33024c1494de7480e69b7a18c09d7cd25a8446839b3be82a56a044a3");
+
+        CelCoinTokenDTO tokenDTO = restClient.generateToken(form);
+        String token = "Bearer " + tokenDTO.getAccessToken();
+            
+        return token;
+    }
 }

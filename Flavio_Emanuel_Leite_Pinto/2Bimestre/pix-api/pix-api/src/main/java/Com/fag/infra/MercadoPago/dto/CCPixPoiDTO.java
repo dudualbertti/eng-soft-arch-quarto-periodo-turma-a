@@ -1,4 +1,4 @@
-package Com.fag.infra.CelCoin.dto;
+package Com.fag.infra.MercadoPago.dto;
 import jakarta.json.bind.annotation.JsonbProperty;
 
 public class CCPixPoiDTO {

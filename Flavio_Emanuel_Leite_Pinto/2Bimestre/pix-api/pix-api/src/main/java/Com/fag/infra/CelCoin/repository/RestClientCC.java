@@ -1,27 +1,30 @@
-package Com.fag.infra.CelCoin.repository;
+package Com.fag.infra.Celcoin.repository;
 
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
-import Com.fag.infra.CelCoin.dto.CCPixDTO;
-import Com.fag.infra.CelCoin.dto.CCPixResponse;
-
+import Com.fag.infra.Celcoin.dto.CelCoinPixDTO;
+import Com.fag.infra.Celcoin.dto.CelCoinTokenDTO;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.HeaderParam;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.core.Form;
 import jakarta.ws.rs.core.MediaType;
 
 @ApplicationScoped
-@RegisterRestClient (baseUri = "https://sandbox.openfinance.celcoin.dev")
+@RegisterRestClient(baseUri = "https://sandbox.openfinance.celcoin.dev")
 public interface RestClientCC {
 
     @POST
-    @Path("/v1/payments")
+    @Path("/pix/v1/brcode/static")
     @Consumes(MediaType.APPLICATION_JSON)
-    CCPixResponse createPix(
+    CelCoinPixDTO createPix(
             @HeaderParam("Authorization") String token,
-            @HeaderParam("X-Idempotency-Key") String idempotency,
-            CCPixDTO payload);
+            CelCoinPixDTO payload);
 
+    @POST
+    @Path("/v5/token")
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    CelCoinTokenDTO generateToken(Form form);
 }
