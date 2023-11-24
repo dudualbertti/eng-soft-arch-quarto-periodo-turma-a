@@ -1,14 +1,16 @@
 package com.fag.infra.celcoin.dto;
 
-import java.util.List;
-
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class CelcoinOperatorsDTO {
+public class CelcoinProductDTO {
 
-  private List<CelcoinOperatorDTO> providers;
+  private Integer code;
+  private Integer cost;
+  private Integer dueProduct;
+  private String productName;
+  private Double minValue;
 
 }
