@@ -1,16 +1,22 @@
 package com.fag.presentantion.controllers;
 
+import com.fag.service.RechargeService;
+import jakarta.Inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/hello")
+@Path("/v1/recharge")
 public class RechargeController {
 
+    @Inject
+    RechargeService service;
+
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello RESTEasy";
+    @Path("/operators")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response hello() {
+        return service.listOperators(45, 0);
     }
 }
