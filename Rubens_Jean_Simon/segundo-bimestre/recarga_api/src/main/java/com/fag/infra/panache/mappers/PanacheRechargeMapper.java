@@ -1,8 +1,8 @@
 package com.fag.infra.panache.mappers;
 
-import com.fag.domain.entities.PhoneBO;
-import com.fag.domain.entities.RechargeBO;
-import com.fag.infra.panache.model.PanacheRecharge;
+import main.com.fag.domain.entities.PhoneBO;
+import main.com.fag.domain.entities.RechargeBO;
+import main.com.fag.infra.panache.model.PanacheRecharge;
 
 public class PanacheRechargeMapper {
 
