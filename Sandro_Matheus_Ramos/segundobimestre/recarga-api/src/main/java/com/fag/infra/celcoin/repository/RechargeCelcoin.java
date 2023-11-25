@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
-import com.fag.domain.dto.OperatorDTO;
+import com.fag.domain.dto.ProviderDTO;
 import com.fag.domain.dto.ProductDTO;
 import com.fag.domain.dto.RechargeDTO;
 import com.fag.domain.repositories.IRechargeVendor;
@@ -49,7 +49,7 @@ public class RechargeCelcoin implements IRechargeVendor {
     }
 
     @Override
-    public List<OperatorDTO> listOperators(Integer stateCode, Integer category) {
+    public List<ProviderDTO> listOperators(Integer stateCode, Integer category) {
 
         try {
             CelcoinOperatorsDTO operators = restClient.listOperators(getToken(), stateCode, category);
