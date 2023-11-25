@@ -2,7 +2,7 @@ package com.fag.domain.usecases;
 
 import java.util.List;
 
-import com.fag.domain.dto.OperatorDTO;
+import com.fag.domain.dto.ProviderDTO;
 import com.fag.domain.repositories.IRechargeVendor;
 
 public class ListOperators {
@@ -13,7 +13,7 @@ public class ListOperators {
         this.vendor = vendor;
     }
 
-    public List<OperatorDTO> execute(Integer stateCode, Integer category) {
+    public List<ProviderDTO> execute(Integer stateCode, Integer category) {
         return vendor.listOperators(stateCode, category);
     }
 
