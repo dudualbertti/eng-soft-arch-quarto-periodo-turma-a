@@ -5,17 +5,11 @@ import java.util.UUID;
 public class RechargeBO {
 
     private UUID id;
-
     private Double value;
-
     private String document;
-
     private Integer providerId;
-
     private PhoneBO phone;
-
     private String receipt;
-
     private Long transactionId;
 
     private boolean success;
