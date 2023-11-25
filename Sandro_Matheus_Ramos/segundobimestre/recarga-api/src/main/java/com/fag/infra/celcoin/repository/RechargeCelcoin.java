@@ -9,6 +9,7 @@ import com.fag.domain.dto.ProviderDTO;
 import com.fag.domain.dto.ProductDTO;
 import com.fag.domain.dto.RechargeDTO;
 import com.fag.domain.repositories.IRechargeVendor;
+import com.fag.infra.celcoin.dto.CelcoinOperatorDTO;
 import com.fag.infra.celcoin.dto.CelcoinOperatorsDTO;
 import com.fag.infra.celcoin.dto.CelcoinProductsDTO;
 import com.fag.infra.celcoin.dto.CelcoinRechargeDTO;
@@ -49,8 +50,12 @@ public class RechargeCelcoin implements IRechargeVendor {
     }
 
     @Override
+<<<<<<< HEAD
     public List<ProviderDTO> listOperators(Integer stateCode, Integer category) {
 
+=======
+    public List<OperatorDTO> listOperators(Integer stateCode, Integer category) {
+>>>>>>> e863cbc9850de21a825c09dd10cb1df840fd7148
         try {
             CelcoinOperatorsDTO operators = restClient.listOperators(getToken(), stateCode, category);
 
