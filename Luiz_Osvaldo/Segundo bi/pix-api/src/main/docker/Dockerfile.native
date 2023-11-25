@@ -7,11 +7,11 @@
 #
 # Then, build the image with:
 #
-# docker build -f src/main/docker/Dockerfile.native -t quarkus/recarga-api .
+# docker build -f src/main/docker/Dockerfile.native -t quarkus/joao .
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8080:8080 quarkus/recarga-api
+# docker run -i --rm -p 8080:8080 quarkus/joao
 #
 ###
 FROM registry.access.redhat.com/ubi8/ubi-minimal:8.8
