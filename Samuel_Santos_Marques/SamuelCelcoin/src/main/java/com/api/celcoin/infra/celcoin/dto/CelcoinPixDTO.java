@@ -41,4 +41,10 @@ public class CelcoinPixDTO {
     public void setTransactionId(String transactionId) {
         this.transactionId = transactionId;
     }
+
+    @Override
+    public String toString() {
+        return "CelcoinPixDTO [key=" + key + ", amount=" + amount + ", merchant=" + merchant + ", transactionId="
+                + transactionId + "]";
+    }
 }

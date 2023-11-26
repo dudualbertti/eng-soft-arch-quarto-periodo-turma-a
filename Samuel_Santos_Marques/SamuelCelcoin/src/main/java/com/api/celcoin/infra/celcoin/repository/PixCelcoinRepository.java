@@ -1,15 +1,17 @@
 package com.api.celcoin.infra.celcoin.repository;
 
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+
 import com.api.celcoin.domain.dto.PixDTO;
 import com.api.celcoin.domain.repositories.IPixVendorRepository;
 import com.api.celcoin.infra.celcoin.dto.CelcoinPixDTO;
 import com.api.celcoin.infra.celcoin.dto.CelcoinPixResponseDTO;
 import com.api.celcoin.infra.celcoin.dto.CelcoinTokenDTO;
 import com.api.celcoin.infra.celcoin.mappers.CelcoinPixMapper;
+
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.core.Form;
-import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 @ApplicationScoped
 public class PixCelcoinRepository implements IPixVendorRepository {
