@@ -1,17 +1,10 @@
 #### Lucas Nathan Olivwira de Moura
 Este projeto utiliza o Quarkus, o Framework Java Supersônico Subatômico.
 
-Se desejar saber mais sobre o Quarkus, por favor, visite o site: https://quarkus.io/ .
-
-## Executando a aplicação no modo de desenvolvimento
-
-Você pode executar sua aplicação no modo de desenvolvimento que possibilita a codificação ao vivo usando:
 
 ```shell script
 ./mvnw compile quarkus:dev
 ```
-
-> **_NOTA:_** O Quarkus agora vem com uma interface de desenvolvimento (Dev UI), disponível apenas no modo de desenvolvimento em http://localhost:8080/q/dev/.
 
 ## Empacotando e executando a aplicação
 
@@ -50,6 +43,4 @@ Ou, se não tiver o GraalVM instalado, pode executar a construção do executáv
 
 Em seguida, você pode executar seu executável nativo com: `./target/lucas-nathanj-oliveira-de-moura-1.0.0-SNAPSHOT-runner`
 
-Se desejar aprender mais sobre a construção de executáveis nativos, por favor, consulte https://quarkus.io/guides/maven-tooling.
 
-## Código fornecido
